@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- О нас -->
+  <section class="container" id="about">
+    <h2 class="text-center">О нас</h2>
+    <p>PyCodeX - это инновационная школа программирования, которая предлагает курсы для начинающих и опытных программистов. Мы стремимся сделать программирование доступным и интересным для всех.</p>
+    <p>Одним из ключевых языков программирования, которому мы уделяем особое внимание, является Python. Python - это высокоуровневый, интерпретируемый язык программирования, который обладает простым и понятным синтаксисом. Он широко используется в различных областях, благодаря своей гибкости и мощным инструментам.</p>
+    <p>Python активно применяется в разработке веб-приложений, создании автоматизированных скриптов, анализе данных, научных исследованиях, искусственном интеллекте, машинном обучении, игровой индустрии и многих других областях. Благодаря своей простоте и эффективности, Python позволяет разработчикам создавать мощные и интуитивно понятные программы.</p>
+    <p>В PyCodeX мы предлагаем курсы по Python, которые помогут вам освоить этот язык программирования с нуля или углубить свои знания. Наши опытные преподаватели и практический подход к обучению помогут вам стать уверенным Python-разработчиком и применять свои навыки в реальных проектах.</p>
+
+  </section>
+
+  <!-- Курсы -->
+  <section class="container" id="courses">
+    <h2 class="text-center">Курсы</h2>
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{% static 'images/banner_img.jpg' %}" class="card-img-top" alt="Курс 1">
+          <div class="card-body">
+            <h5 class="card-title">Python-разработчик с нуля</h5>
+            <p class="card-text">курс для начинающих</p>
+            <a href="{% url 'course' 1 %}" class="btn btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+<!--      <div class="col-md-4">-->
+<!--        <div class="card">-->
+<!--          <img src="path_to_image.jpg" class="card-img-top" alt="Курс 2">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Название курса 2</h5>-->
+<!--            <p class="card-text">Описание курса 2</p>-->
+<!--            <a href="#" class="btn btn-primary">Подробнее</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="col-md-4">-->
+<!--        <div class="card">-->
+<!--          <img src="path_to_image.jpg" class="card-img-top" alt="Курс 3">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Название курса 3</h5>-->
+<!--            <p class="card-text">Описание курса 3</p>-->
+<!--            <a href="#" class="btn btn-primary">Подробнее</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="container" id="contacts">
+    <h2 class="text-center">Контакты</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Телефон</h5>
+            <p class="card-text">+7 702 482-36-66</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Email</h5>
+            <p class="card-text">Amirkhan.Akhmetov@bsbnb.kz</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Адрес</h5>
+            <p class="card-text">Казахстан, город Астана, район Байконыр, улица Султанмахмуда Торайгырова, дом 1, кв. 80, почтовый индекс 010000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
