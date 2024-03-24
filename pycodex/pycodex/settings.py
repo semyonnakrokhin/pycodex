@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["amirkhln.beget.tech", "www.amirkhln.beget.tech", "pycodex.ru", "www.pycodex.ru"]
 
 
 # Application definition
