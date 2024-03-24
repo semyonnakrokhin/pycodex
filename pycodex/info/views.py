@@ -6,4 +6,4 @@ def index(request):
 
 
 def course(request, pk):
-    return render(request, 'info/course1.html')
+    return render(request, f'info/course{pk}.html')
