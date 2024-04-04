@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block style %}
+    .card {
+        border-radius: 10px;
+        padding: 15px;
+    }
+    .code-block {
+        background-color: #000;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .code-block code {
+        display: block;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        font-size: 14px;
+        white-space: pre-wrap;
+        color: #fff; /* Текст внутри блока кода белый */
+    }
+{% endblock style %}
+
 {% block content %}
 <div class="container">
   <h2>Добро пожаловать на курс "Backend на FastAPI и введение в архитектуру web-приложений"!</h2>
@@ -43,7 +64,7 @@
         <th scope="row">1</th>
         <td>Введение в архитектуру ЭВМ и ОС</td>
         <td>Принципы построения ЭВМ; Введение в язык ассемблера; Базовые элементы операционной системы; Процессы, потоки, многозадачность; Организация памяти; Межпроцессное взаимодействие</td>
-        <td>2</td>
+        <td>1</td>
         <td>12</td>
       </tr>
 
@@ -101,7 +122,7 @@
       </tr>
       <tr>
           <td>Коллективный мини-проект и коллективное взаимодействие с удаленным репозиторием</td>
-          <td>1</td>
+          <td>0.5</td>
           <td>-</td>
       </tr>
 
@@ -110,7 +131,7 @@
           <th scope="row" rowspan="2">5</th>
           <td rowspan="2">Введение в базы данных на примере PostgreSQL</td>
           <td>Знакомство с языком SQL</td>
-          <td>3</td>
+          <td>2</td>
           <td>23</td>
       </tr>
       <tr>
@@ -121,7 +142,7 @@
             Транзакции;
             Оптимизация запросов и индексы
           </td>
-          <td>3</td>
+          <td>2</td>
           <td>15</td>
       </tr>
 
@@ -130,7 +151,7 @@
         <th scope="row">6</th>
         <td>Знакомство с архитектурными стилями SOLID, YAGNI.</td>
         <td>Разбор принципов проектирования SOLID</td>
-        <td>1</td>
+        <td>0.5</td>
         <td>6</td>
       </tr>
 
@@ -139,7 +160,7 @@
           <th scope="row" rowspan="2">7</th>
           <td rowspan="2">Знакомство с сериализатором Pydantic</td>
           <td>Сериализаторы pydantic и pydantic-settings; Структура проекта</td>
-          <td>1</td>
+          <td>0.5</td>
           <td>4</td>
       </tr>
       <tr>
@@ -159,7 +180,7 @@
             Корутины;
             Фреймворк asyncio, ключевые слова async/await
           </td>
-          <td>2</td>
+          <td>1</td>
           <td>10</td>
       </tr>
       <tr>
@@ -176,7 +197,7 @@
             Знакомство с Domain driven design, слоистой архитектурой: слои репозиториев и сервисов;
             Слой Unit-of-work
           </td>
-          <td>1.5</td>
+          <td>1</td>
           <td>15</td>
       </tr>
       <tr>
@@ -184,12 +205,12 @@
             Знакомство с фреймворком dependency-injector и SQLAlchemy;
             Разбор проекта о погоде
           </td>
-          <td>2.5</td>
+          <td>1</td>
           <td>10</td>
       </tr>
       <tr>
           <td>Домашний-классовый мини проект по отработке архитектуры веб-приложений, git</td>
-          <td>2</td>
+          <td>1</td>
           <td>30</td>
       </tr>
 
@@ -214,7 +235,7 @@
             Параллельное выполнение задач с Celery;
             Введение в тестирование: юнит и интеграционные тесты с фреймворком pytest
           </td>
-          <td>4</td>
+          <td>2</td>
           <td>30</td>
       </tr>
       <tr>
@@ -237,7 +258,7 @@
         <th scope="row">12</th>
         <td>Простой проект</td>
         <td>Самостоятельное выполнение проекта на FastAPI, обсуждение проблем в коллективе и с преподавателем</td>
-        <td>2</td>
+        <td>1</td>
         <td>30</td>
       </tr>
 
@@ -246,7 +267,7 @@
         <th scope="row">13</th>
         <td>Итоговый проект</td>
         <td>Полностью самостоятельное выполнение проекта на FastAPI</td>
-        <td>1.5</td>
+        <td>1</td>
         <td>16</td>
       </tr>
 
@@ -254,7 +275,7 @@
       <tr>
         <th scope="row"></th>
         <td colspan="2">Итог</td>
-        <td>39</td>
+        <td>27</td>
         <td>252</td>
       </tr>
     </tbody>
@@ -268,6 +289,148 @@
       По окончании курса стек технологий, которым вы будете обладать:
       <b>Python, FastAPI, pytest, pydantic, PostgreSQL, SQLAlchemy, Docker, docker-compose, git, Nginx, Gunicorn, asyncio, aiohttp, Celery, RabbitMQ, Redis, dependency-injector.</b>
     </p>
+</div>
+
+<br>
+
+<div class="container">
+  <h2>Формат обучения</h2>
+  <p>Все занятия проводятся в онлайн формате</p>
+  <p>Количество учеников в группе: от 6 до 8</p>
+</div>
+
+<br>
+
+<div class="container">
+  <h2>Критерии отбора</h2>
+  <p>
+      1. Успешное прохождение интервью по темам базового Python и ООП
+  </p>
+  <p>
+      2. Успешное решение задачи следующего уровня в течение 1 дня:
+  </p>
+
+  <div class="card" style="border-radius: 15px; padding: 15px;">
+    <p>
+        Необходимо объявить класс с именем TicTacToe (крестики-нолики) для управления игровым процессом.
+        Объекты этого класса будут создаваться командой:
+    </p>
+
+    <div class="code-block">
+        <pre><code class="language-python">game = TicTacToe()</code></pre>
+    </div>
+
+    <p>
+        В каждом объекте этого класса должен быть публичный атрибут:
+        <code>pole</code> - двумерный кортеж, размером 3x3.
+    </p>
+    <p>
+        Каждый элемент кортежа <code>pole</code> является объектом класса <code>Cell</code>:
+    </p>
+
+    <div class="code-block">
+        <pre><code class="language-python">cell = Cell()</code></pre>
+    </div>
+
+    <p>
+        В объектах этого класса должно автоматически формироваться локальное свойство:
+        <code>value</code> - текущее значение в ячейке: 0 - клетка свободна; 1 - стоит крестик; 2 - стоит нолик.
+    </p>
+
+    <p>
+        Также с объектами класса Cell должна выполняться функция:
+        <code>bool(cell)</code> - возвращает True, если клетка свободна (value = 0) и False - в противном случае.
+    </p>
+
+    <p>
+        К каждой клетке игрового поля должен быть доступ через операторы:
+    </p>
+
+    <div class="code-block">
+        <pre><code class="language-python">res = game[i, j] # получение значения из клетки с индексами i, j
+game[i, j] = value # запись нового значения в клетку с индексами i, j</code></pre>
+    </div>
+
+    <p>
+        Если индексы указаны неверно (не целые числа или числа, выходящие за диапазон [0; 2]), то следует генерировать исключение командой
+    </p>
+
+    <div class="code-block">
+        <pre><code class="language-python">raise IndexError('некорректно указанные индексы')</code></pre>
+    </div>
+
+    <p>
+        Чтобы в программе не оперировать величинами:
+        0 - свободная клетка; 1 - крестики и 2 - нолики,
+        в классе TicTacToe должны быть три публичных атрибута (атрибуты класса):
+    </p>
+
+    <div class="code-block">
+        <pre><code class="language-python">FREE_CELL = 0      # свободная клетка
+HUMAN_X = 1        # крестик (игрок - человек)
+COMPUTER_O = 2     # нолик (игрок - компьютер)
+</code></pre>
+    </div>
+
+    <p>
+        В самом классе TicTacToe должны быть объявлены следующие методы (как минимум):
+    </p>
+
+    <p>
+        <code>init()</code> - инициализация игры (очистка игрового поля, возможно, еще какие-либо действия);<br>
+        <code>show()</code> - отображение текущего состояния игрового поля (как именно - на свое усмотрение);<br>
+        <code>human_go()</code> - реализация хода игрока (запрашивает координаты свободной клетки и ставит туда крестик);<br>
+        <code>computer_go()</code> - реализация хода компьютера (ставит случайным образом нолик в свободную клетку).
+    </p>
+
+    <p>
+        Также в классе TicTacToe должны быть следующие объекты-свойства (property):
+    </p>
+
+    <p>
+        <code>is_human_win</code> - возвращает True, если победил человек, иначе - False;<br>
+        <code>is_computer_win</code> - возвращает True, если победил компьютер, иначе - False;<br>
+        <code>is_draw</code> - возвращает True, если ничья, иначе - False.
+    </p>
+
+    <p>
+        Наконец, с объектами класса TicTacToe должна выполняться функция:
+    </p>
+
+    <p>
+        <code>bool(game)</code> - возвращает True, если игра не окончена (никто не победил и есть свободные клетки) и False - в противном случае.
+    </p>
+
+    <div class="code-block">
+        <pre><code class="language-python">game = TicTacToe()
+game.init()
+step_game = 0
+while game:
+game.show()
+
+if step_game % 2 == 0:
+    game.human_go()
+else:
+    game.computer_go()
+
+step_game += 1
+
+game.show()
+
+if game.is_human_win:
+print("Поздравляем! Вы победили!")
+elif game.is_computer_win:
+print("Все получится, со временем")
+else:
+print("Ничья.")
+</code></pre>
+    </div>
+
+    <p>
+        Вам в программе необходимо объявить только два класса: TicTacToe и Cell так, чтобы с их помощью можно было бы сыграть в "Крестики-нолики" между человеком и компьютером.
+    </p>
+  </div>
+
 </div>
 
 <br>
